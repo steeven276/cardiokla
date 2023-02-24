@@ -1,0 +1,37 @@
+h1 {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+}
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.email-birthdate-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.spacer {
+  width: 30px;
+}
+
+.select {
+  display: flex;
+  justify-content: center;
+}
+
+.chart-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
