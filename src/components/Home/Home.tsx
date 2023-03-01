@@ -1,7 +1,7 @@
 import "antd/dist/reset.css";
+import { FunctionComponent } from "react";
 import "./Home.css";
-import React, { FunctionComponent } from 'react';
 
 export const Home: FunctionComponent = () => {
-  return <h1>Welcome to Cardiokla!</h1>
-}
+  return <h1>Welcome to Cardiokla!</h1>;
+};

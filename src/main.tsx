@@ -1,16 +1,16 @@
+import { ConfigProvider } from "antd";
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
 import "./common.css";
 import { Home } from "./components/Home/Home";
 import { Patient } from "./components/Patient/Patient";
-import { ConfigProvider } from "antd";
+import "./index.css";
 
 import frFR from "antd/es/locale/fr_FR";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import initPatientsStorage from "./data/initPatientsStorage";
 import initMedicalDataStorage from "./data/initMedicalDataStorage";
+import initPatientsStorage from "./data/initPatientsStorage";
 
 const router = createBrowserRouter([
   {
