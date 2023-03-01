@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "test": "vitest --config ./vite.config.ts"
+    "test": "vitest --config ./vite.config.ts",
+    "format": "prettier ."
   },
   "dependencies": {
     "@ant-design/icons": "^5.0.1",
@@ -25,6 +26,7 @@
     "@types/react-dom": "^18.0.10",
     "@vitejs/plugin-react-swc": "^3.0.0",
     "jsdom": "^21.1.0",
+    "prettier": "^2.8.4",
     "typescript": "^4.9.3",
     "vite": "^4.1.0",
     "vitest": "^0.28.5"
