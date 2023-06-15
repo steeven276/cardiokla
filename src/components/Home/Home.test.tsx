@@ -1,4 +1,5 @@
-import { render } from "@testing-library/react";
+import { act, render } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import { beforeEach, describe, expect, it, vitest } from "vitest";
 import { Patient } from "../../types/Patient";
 import { Home } from "./Home";
@@ -55,13 +56,15 @@ describe("[Component] Home", () => {
     window.getComputedStyle = (elt) => getComputedStyle(elt);
   });
 
-  describe("Home", () => {
-    it("should display the title", async () => {
-      const homeComponent = render(<Home />);
+  it("search", async () => {
+    const homeComponent = render(<Home />);
 
-      const title = homeComponent.getByText("Welcome to Cardiokla!");
+    const searchBar = homeComponent.getByTestId("search-bar");
+    await act(() => userEvent.type(searchBar, "Crampon"));
 
-      expect(title).to.toBeInTheDocument();
-    });
+    const maxime = homeComponent.getByText("Maxime Crampon");
+    expect(maxime).toBeInTheDocument();
+    const raphael = homeComponent.queryByText("Raphaël Dhôte");
+    expect(raphael).not.toBeInTheDocument();
   });
 });
